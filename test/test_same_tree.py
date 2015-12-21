@@ -3,7 +3,7 @@
 '''
 unit test for same tree
 '''
-from src.same_tree import *
+from src.same_tree import solution
 
 __author__ = 'hao.chen'
 
