@@ -8,12 +8,7 @@ Two binary trees are considered equal if they are structurally identical and the
 
 __author__ = 'hao.chen'
 
-class tree_node(object):
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
-
+from data_structure import *
 
 class solution(object):
     def is_same_tree(self, p, q):
