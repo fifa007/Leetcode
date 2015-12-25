@@ -19,7 +19,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: void Do not return anything, modify nums in-place instead.
         """
-        if len(nums) == 0 or len(nums) == 1:
+        if nums is None or len(nums) == 0 or len(nums) == 1:
             return
         p1 = 0
         p2 = 0
