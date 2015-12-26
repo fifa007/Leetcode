@@ -6,13 +6,13 @@ unit test for symmetric_tree
 
 import unittest
 import src.data_structure
-import src.symmetric_tree
+import src.symmetric_tree_recursive
 
 
 class symmetric_tree_test(unittest.TestCase):
     def test_symmetric_tree(self):
         # null tree
-        sol = src.symmetric_tree.Solution()
+        sol = src.symmetric_tree_recursive.Solution()
         self.failUnless(sol.is_symmetric(None))
 
         # one element tree
