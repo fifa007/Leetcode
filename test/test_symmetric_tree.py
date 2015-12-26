@@ -7,12 +7,22 @@ unit test for symmetric_tree
 import unittest
 import src.data_structure
 import src.symmetric_tree_recursive
+import src.symmetric_tree_iterative
 
 
 class symmetric_tree_test(unittest.TestCase):
-    def test_symmetric_tree(self):
+
+    # test recursive method
+    def test_symmetric_tree_recursive(self):
+        self.method_factory(src.symmetric_tree_recursive.Solution)
+
+    # test for iterative method
+    def test_symmetric_tree_iterative(self):
+        self.method_factory(src.symmetric_tree_iterative.Solution)
+
+    def method_factory(self, method_class):
         # null tree
-        sol = src.symmetric_tree_recursive.Solution()
+        sol = method_class()
         self.failUnless(sol.is_symmetric(None))
 
         # one element tree
@@ -39,3 +49,9 @@ class symmetric_tree_test(unittest.TestCase):
         r1_right.left = r1_right_left
         r1_right.right = r1_right_right
         self.failUnless(sol.is_symmetric(r1))
+
+def main(self):
+    unittest.main()
+
+if __name__ == "__main__":
+    main()

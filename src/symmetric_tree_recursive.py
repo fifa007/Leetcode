@@ -18,8 +18,6 @@ But the following is not:
    3    3
 '''
 
-from data_structure import tree_node
-
 class Solution(object):
     def is_symmetric_helper(self, root1, root2):
         if root1 is None and root2 is None:
