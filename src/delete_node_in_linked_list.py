@@ -1,0 +1,19 @@
+#!/usr/bin/env python2.7
+
+'''
+Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
+Supposed the linked list is 1 -> 2 -> 3 -> 4 and you are given the third node with value 3,
+the linked list should become 1 -> 2 -> 4 after calling your function.
+'''
+
+
+class Solution(object):
+    def delete_node(self, node):
+        """
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+        """
+        if node is None or node.next is None:
+            return
+        node.val = node.next.val
+        node.next = node.next.next
