@@ -69,6 +69,15 @@ class linked_list(object):
         if curr is not None:
             prev.next = curr.get_next()
 
+    def __eq__(self, other):
+        if isinstance(other, self.__class__):
+            return self.__dict__ == other.__dict__
+        return False
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
+
 
 
 
