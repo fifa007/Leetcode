@@ -78,6 +78,58 @@ class linked_list(object):
         return not self.__eq__(other)
 
 
+class binary_tree(object):
+    def __init__(self):
+        self.root = None
+
+    def get_root(self):
+        return self.root
+
+    def add_node(self, val):
+        if self.root is None:
+            self.root = tree_node(val)
+        else:
+            self._add_node(val, self.root)
+
+    def _add_node(self, val, node):
+        if val < node.val:
+            if node.left is not None:
+                self._add_node(val, node.left)
+            else:
+                node.left = tree_node(val)
+        else:
+            if node.right is not None:
+                self._add_node(val, node.right)
+            else:
+                node.right = tree_node(val)
+
+    def find_node(self, val):
+        if self.root is not None:
+            return self._find_node(val, self.root)
+        else:
+            return None
+
+    def _find_node(self, val, node):
+        if val == node.val:
+            return node
+        elif val < node.val:
+            return self._find_node(val, node.left)
+        else:
+            return self._find_node(val, node.right)
+
+    def delete_tree(self):
+        self.root = None
+
+    def print_tree(self):
+        if self.root is not None:
+            self._print_tree(self.root)
+
+    def _print_tree(self, node):
+        if node is not None:
+            self._print_tree(node.left)
+            print node.val + ' '
+            self._print_tree(node.right)
+            
 
 
 
