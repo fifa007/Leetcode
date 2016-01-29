@@ -78,7 +78,7 @@ class linked_list(object):
         return not self.__eq__(other)
 
 
-class binary_tree(object):
+class binary_search_tree(object):
     def __init__(self):
         self.root = None
 

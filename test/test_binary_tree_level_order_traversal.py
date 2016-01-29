@@ -18,12 +18,12 @@ class binary_tree_level_order_traversal_test(unittest.TestCase):
 
     #
     def test_with_single_node_tree(self):
-        binary_tree = src.data_structure.binary_tree()
+        binary_tree = src.data_structure.binary_search_tree()
         binary_tree.add_node(1)
         self.failUnless(self.sol.binary_tree_level_order_traversal(binary_tree.get_root()) == [[1]])
 
     def test_with_binary_tree(self):
-        binary_tree = src.data_structure.binary_tree()
+        binary_tree = src.data_structure.binary_search_tree()
         binary_tree.add_node(5)
         binary_tree.add_node(2)
         binary_tree.add_node(8)

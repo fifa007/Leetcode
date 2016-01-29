@@ -23,7 +23,7 @@ class binary_tree_level_order_traversal_II_test(unittest.TestCase):
 
     #
     def test_with_binary_tree(self):
-        binary_tree = src.data_structure.binary_tree()
+        binary_tree = src.data_structure.binary_search_tree()
         binary_tree.add_node(9)
         binary_tree.add_node(3)
         binary_tree.add_node(20)

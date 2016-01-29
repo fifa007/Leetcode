@@ -9,7 +9,7 @@ import src.data_structure
 import unittest
 
 class data_structur_test(unittest.TestCase):
-    sol = src.data_structure.binary_tree()
+    sol = src.data_structure.binary_search_tree()
     sol.add_node(5)
 
     #

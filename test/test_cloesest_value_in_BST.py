@@ -17,7 +17,7 @@ class closest_bst_value_test(unittest.TestCase):
 
     #
     def test_with_root_value_is_target(self):
-        bst = src.data_structure.binary_tree()
+        bst = src.data_structure.binary_search_tree()
         bst.add_node(5)
         bst.add_node(3)
         bst.add_node(8)
@@ -25,7 +25,7 @@ class closest_bst_value_test(unittest.TestCase):
 
     #
     def test_with_target_less_than_root_value(self):
-        bst = src.data_structure.binary_tree()
+        bst = src.data_structure.binary_search_tree()
         bst.add_node(12)
         bst.add_node(8)
         bst.add_node(5)
@@ -35,13 +35,13 @@ class closest_bst_value_test(unittest.TestCase):
 
     #
     def test_with_single_root_tree(self):
-        bst = src.data_structure.binary_tree()
+        bst = src.data_structure.binary_search_tree()
         bst.add_node(8)
         self.failUnless(self.sol.find_closest_value_in_BST(bst.get_root(), 13.1) == 8)
 
     #
     def test_with_target_on_right_side_of_root(self):
-        bst = src.data_structure.binary_tree()
+        bst = src.data_structure.binary_search_tree()
         bst.add_node(12)
         bst.add_node(8)
         bst.add_node(5)
