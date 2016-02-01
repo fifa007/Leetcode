@@ -131,5 +131,8 @@ class binary_search_tree(object):
             self._print_tree(node.right)
             
 
-
+class Interval(object):
+    def __init__(self, s = 0, e = 0):
+        self.start = s
+        self.end = e
 
