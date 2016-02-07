@@ -42,6 +42,16 @@ class linked_list(object):
         node.set_next(self.head)
         self.head = node
 
+    def insert_right(self, data):
+        if self.head is None:
+            self.head = list_node(data)
+            return
+        h = self.head
+        while h.next is not None:
+            h = h.next
+        h.next = list_node(data)
+
+
     def get_size(self):
         curr = self.head
         count = 0
@@ -68,6 +78,9 @@ class linked_list(object):
             curr = curr.get_next()
         if curr is not None:
             prev.next = curr.get_next()
+
+    def get_head(self):
+        return self.head
 
     def __eq__(self, other):
         if isinstance(other, self.__class__):
