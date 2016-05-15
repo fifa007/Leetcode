@@ -18,3 +18,24 @@ Implement a function int findCelebrity(n), your function should minimize the num
 Note: There will be exactly one celebrity if he/she is in the party.
 Return the celebrity's label if there is a celebrity in the party. If there is no celebrity, return -1.
 '''
+
+
+class Solution(object):
+    def knows(self, a, b):
+        return True if a > b else False
+
+    def find_celebrity(self, n):
+        if n <= 1:
+            return 0
+        l = 0
+        r = n - 1
+        while l < r:
+            if self.knows(l, r):
+                l += 1
+            else:
+                r -= 1
+        for i in xrange(n):
+            if i != l:
+                if self.knows(l, i) or not self.knows(i, l):
+                    return -1
+        return l
