@@ -23,5 +23,6 @@ class Solution(object):
         ret = []
         solution = []
         sum = 0
+        candidates.sort()
         self.helper(candidates, target, 0, 0, solution, ret)
         return ret
