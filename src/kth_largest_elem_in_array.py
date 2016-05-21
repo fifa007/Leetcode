@@ -27,4 +27,4 @@ class Solution(object):
                 heapq.heappop(h)
                 heapq.heappush(h, nums[i])
             i += 1
-        return h[0]k
+        return h[0]
