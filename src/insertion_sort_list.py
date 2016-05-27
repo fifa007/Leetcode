@@ -6,6 +6,7 @@ Sort a linked list using insertion sort.
 
 import src.data_structure
 
+'''
 class Solution(object):
     def insert(self, head, node):
         while head.next and head.next.val <= node.val:
@@ -27,3 +28,4 @@ class Solution(object):
             ret[i].next = ret[i+1]
             i += 1
         return ret[0]
+'''
