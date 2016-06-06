@@ -149,3 +149,9 @@ class Interval(object):
         self.start = s
         self.end = e
 
+class UndirectedGraphNode(object):
+    def __init__(self, x):
+        self.label = x
+        self.neighbors = []
+
+
