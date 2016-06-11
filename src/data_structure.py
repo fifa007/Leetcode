@@ -154,4 +154,9 @@ class UndirectedGraphNode(object):
         self.label = x
         self.neighbors = []
 
+class TrieNode(object):
+    def __init__(self):
+        self.children = [None] * 26
+        self.value = 0
+
 
