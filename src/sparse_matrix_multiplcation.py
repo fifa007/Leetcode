@@ -36,6 +36,8 @@ class Solution(object):
         k = len(A[0])
         ret = [[0 for j in xrange(n)] for i in xrange(m)]
         for i in xrange(m):
+            if not any(A[i]):
+                continue
             for l in xrange(k):
                 if A[i][l] != 0:
                     for j in xrange(n):
